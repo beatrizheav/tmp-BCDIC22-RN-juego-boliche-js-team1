@@ -1,0 +1,78 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+.body{
+    background-color: 1E1E1E;
+}
+
+.body h2{
+    background-color: black;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    letter-spacing: 5px;
+}
+
+.tabla{
+    border:1px solid black;
+    border-radius: 15px;
+    margin-left: 30px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+
+
+.titulos{
+    background-color: black;
+    color:whitesmoke;
+    border-radius: 10px;
+}
+
+.titulos th{
+    border-radius: 20px;
+    padding: 7px;
+}
+
+.tiros td{
+    padding: 7px;
+}
+
+.tiro2{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.totales td{
+    padding: 7px;
+}
+
+.button_cont{
+    margin: 0 auto;
+    width: 150px;
+    margin-top: 40px;
+}
+
+.boton{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border-radius: 7px;
+    padding:7px;
+    width: 100%;
+    margin:0 auto;
+}
+
+.boton:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "tmp-bcdic22-rn-juego-boliche-js-team1",
+  "version": "1.0.0",
+  "description": "![BrightCoders Logo](img/logo.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrightCoders-Institute/tmp-BCDIC22-RN-juego-boliche-js-team1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrightCoders-Institute/tmp-BCDIC22-RN-juego-boliche-js-team1/issues"
+  },
+  "homepage": "https://github.com/BrightCoders-Institute/tmp-BCDIC22-RN-juego-boliche-js-team1#readme",
+  "dependencies": {
+    "faker": "^6.6.6"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
