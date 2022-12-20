@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "![BrightCoders Logo](img/logo.png)",
   "main": "index.js",
-  "scripts": {
-    "test": "jest --verbose"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BrightCoders-Institute/tmp-BCDIC22-RN-juego-boliche-js-team1.git"
@@ -21,9 +18,9 @@
     "faker": "^6.6.6"
   },
   "devDependencies": {
-    "jest": "^29.3.1"
-  },
-  "jest": {
-    "testEnvironment": "node"
+    "@types/jasmine": "^4.3.1",
+    "eslint": "^8.30.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
   }
 }
