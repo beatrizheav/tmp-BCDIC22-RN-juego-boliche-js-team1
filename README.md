@@ -3,15 +3,5 @@
 # El Juego de boliche
 - [Ver instrucciones](./instructions.md)
 
-This README would normally document whatever steps are necessary to get the application up and running.
-
-Things you may want to cover:
-
-- Title or Project Name
-- Table of contents
-- Description. A brief description of what the project is about
-- How to Install and Run the Project.
-- How to Use the Project.
-- Credits
-- Badges
-  
+# Calidad de código con CODACY
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/edbd83da7a8e41439bc53a3ad128e530)](https://www.codacy.com/gh/BrightCoders-Institute/tmp-BCDIC22-RN-juego-boliche-js-team1/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BrightCoders-Institute/tmp-BCDIC22-RN-juego-boliche-js-team1&amp;utm_campaign=Badge_Grade)
