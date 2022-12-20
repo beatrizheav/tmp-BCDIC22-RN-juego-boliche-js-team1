@@ -1,90 +1,67 @@
-let tablero = []
 
-function crearTablero () {
-  for (let n = 0; n < 3; n++) {
-    tablero[n] = []
-    for (let m = 0; m <= 9; m++) {
-      tablero[n][m] = ' '
-    }
+  //Guarda el total de cada Frame en un array
+  let totalesFrames = []
+  //Variable tipo número nos va sumando el puntaje
+let puntajeSuma = 0;
+  //Guarda la suma de los tiros de cada Frame
+let puntajeFrames = []
+  //Guarda el valor de cada tiro 1
+let tiro1 = []
+  //Guarda el valor de cada tiro 2
+let tiro2 = []
+
+//Genera los valores de cada tiro y los guarda en las posiciones de los array
+function tiros(){
+  for (let i = 0; i < 11; i++) {
+    tiro1[i] = Math.round(Math.random() * 10)
+    let numero = 10 - tiro1[i]
+    tiro2[i]= Math.round(Math.random() * numero)
+    
+    //Aqui sacamos el total de cada frame
+    totalesFrames[i] = tiro1[i]+tiro2[i]
+    
+    //Imprime los valores de los tiros en el tablero (Web)
+    const tiro1_html = document.getElementById('tiro1_i' + i.toString())
+    tiro1_html.innerHTML = tiro1[i]
+    const tiro2_html = document.getElementById('tiro2_i' + i.toString())
+    tiro2_html.innerHTML = tiro2[i]
   }
-  console.table(tablero)
 }
 
-crearTablero()
+ //Esta funcion saca el valor total del puntaje (sumatoria de cada frame)
+function sumaTotales(){
 
-let tiro1 = 0,
-  tiro2 = 0,
-  total = 0
-let tiro3 = 0
+  //Strike
+  for(let i=0; i < 10; i++){
+    if (tiro1[i]===10){
+      puntajeSuma = puntajeSuma + totalesFrames[i] + totalesFrames[i+1]
+      puntajeFrames[i] = puntajeSuma
+      console.log("puntajeTotal(Strike):",[i+1], puntajeFrames[i])
+   }//Spare
+   else if (totalesFrames[i]===10){
+     puntajeSuma = puntajeSuma + totalesFrames[i] + tiro1[i+1]
+     puntajeFrames[i] = puntajeSuma
+     console.log("puntajeTotal(Spare)...:",[i+1], puntajeFrames[i])
+   }//Tiro normal
+   else {
+     puntajeSuma = puntajeSuma + totalesFrames[i];
+     puntajeFrames[i] = puntajeSuma
+     console.log('puntajeTotal:',[i+1],puntajeFrames[i])
+   }   
 
-let totales = []
-let totalesParciales = []
-let totalParcial = 0
-
-let control = 0
-
-function aleatorio () {
-  for (let i = 0; i < 10; i++) {
-    tiro1 = Math.round(Math.random() * 10)
-    let numero = 10 - tiro1
-    tiro2 = Math.round(Math.random() * numero)
-
-    totales[i] = tiro1 + tiro2
-
-    console.log('tiros', tiro1, tiro2)
-    console.log('total', totales[i])
-
-    //Strike:
-    tiro1 === 10 ? strike() : tiro1 + tiro2 === 10 ? spare() : ''
-
-    totalParcial = totalParcial + totales[i]
-    totalesParciales.push(totalParcial)
-    console.log('totalParcial', totalParcial)
-
-    imprimirTotales(i)
+     //Imprime los valores de los totales en el tablero
+    const totales_html = document.getElementById('totales_i' + i.toString())
+  totales_html.innerHTML = puntajeFrames[i]
   }
-  console.table(tablero)
 }
 
-function imprimirTotales (i) {
-  const tiro1_html = document.getElementById('tiro1_i' + i.toString())
-  tiro1_html.innerHTML = tiro1
+//Llamamos a las funciones tiros y sumaTotales
+tiros();
+sumaTotales();
 
-  const tiro2_html = document.getElementById('tiro2_i' + i.toString())
-  tiro2_html.innerHTML = tiro2
-
-  const totales_html = document.getElementById('totales_i' + i.toString())
-  totales_html.innerHTML = totalesParciales[i]
-
-  tablero[control][i] = tiro1
-  tablero[control + 1][i] = tiro2
-  tablero[control + 2][i] = totalesParciales[i]
-}
-
-aleatorio()
-
-function strike () {
-  tiro1 = Math.round(Math.random() * 10)
-  let numero = 10 - tiro1
-  tiro2 = Math.round(Math.random() * numero)
-  console.log('tiros2', tiro1, tiro2)
-  console.log('total2', total)
-}
-
-function spare () {
-  tiro1 = Math.round(Math.random() * 10)
-}
-
-function puntajeBasico () {
-  total = tiro1 + tiro2
-}
-
-//-----------------------------//
-//HTML script:
-
-
-/********************************** */
+/********************************** Onclick HTML */
 function jugar(){
     console.log("Jugar")
     location.reload()
 }
+
