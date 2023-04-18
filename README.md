@@ -1,7 +1,6 @@
 ![BrightCoders Logo](img/logo.png)
 
-# El Juego de boliche
-- [Ver instrucciones](./instructions.md)
+# Bowling Game
 
 # About Project
 The game consists of 10 frames. In each frame the player has two opportunities to knock down 10 pins. The score for the frame is the total number of pins knocked down, plus bonuses for strikes and spares.
